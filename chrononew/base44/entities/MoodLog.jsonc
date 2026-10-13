@@ -1,0 +1,45 @@
+{
+  "name": "Medication",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "dosage": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string",
+      "description": "e.g. Twice daily"
+    },
+    "schedule_times": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "HH:mm times"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "refill_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "dosage"
+  ]
+}

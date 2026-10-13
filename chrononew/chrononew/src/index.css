@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 61% 48%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 215 25% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 168 76% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 207 90% 54%;
+    --chart-1: 207 90% 54%;
+    --chart-2: 168 76% 42%;
+    --chart-3: 262 83% 58%;
+    --chart-4: 25 95% 53%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.75rem;
+    --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 215 25% 12%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 207 90% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 207 90% 54%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 20% 96%;
+    --card: 215 25% 11%;
+    --card-foreground: 210 20% 96%;
+    --popover: 215 25% 11%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 168 76% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 207 90% 54%;
+    --chart-1: 207 90% 60%;
+    --chart-2: 168 76% 48%;
+    --chart-3: 262 83% 64%;
+    --chart-4: 25 95% 59%;
+    --chart-5: 340 75% 60%;
+    --sidebar-background: 215 25% 6%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 207 90% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 12%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 215 20% 14%;
+    --sidebar-ring: 207 90% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(207, 90%, 54%), hsl(207, 90%, 40%));
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(168, 76%, 42%), hsl(168, 76%, 32%));
+  }
+  .gradient-mesh {
+    background: 
+      radial-gradient(ellipse at 20% 50%, hsl(207, 90%, 54%, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(168, 76%, 42%, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 80%, hsl(262, 83%, 58%, 0.04) 0%, transparent 50%);
+  }
+}

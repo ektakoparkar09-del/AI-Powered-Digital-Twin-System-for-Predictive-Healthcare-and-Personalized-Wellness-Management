@@ -1,0 +1,23 @@
+{
+  "name": "ExerciseLog",
+  "type": "object",
+  "properties": {
+    "log_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "workout_type": {
+      "type": "string"
+    },
+    "duration_min": {
+      "type": "number"
+    },
+    "calories_burned": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "log_date",
+    "workout_type"
+  ]
+}

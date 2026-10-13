@@ -1,0 +1,173 @@
+{
+  "name": "HealthProfile",
+  "type": "object",
+  "properties": {
+    "age": {
+      "type": "number",
+      "description": "User age"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ]
+    },
+    "height_cm": {
+      "type": "number",
+      "description": "Height in cm"
+    },
+    "weight_kg": {
+      "type": "number",
+      "description": "Weight in kg"
+    },
+    "bmi": {
+      "type": "number",
+      "description": "Auto-calculated BMI"
+    },
+    "blood_pressure_systolic": {
+      "type": "number"
+    },
+    "blood_pressure_diastolic": {
+      "type": "number"
+    },
+    "blood_sugar": {
+      "type": "number",
+      "description": "Fasting blood sugar mg/dL"
+    },
+    "cholesterol": {
+      "type": "number",
+      "description": "Total cholesterol mg/dL"
+    },
+    "heart_rate": {
+      "type": "number",
+      "description": "Resting heart rate bpm"
+    },
+    "existing_diseases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "medications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sleep_hours": {
+      "type": "number"
+    },
+    "exercise_frequency": {
+      "type": "string",
+      "enum": [
+        "none",
+        "light",
+        "moderate",
+        "active",
+        "very_active"
+      ]
+    },
+    "diet_type": {
+      "type": "string",
+      "enum": [
+        "balanced",
+        "vegetarian",
+        "vegan",
+        "keto",
+        "mediterranean",
+        "fast_food",
+        "other"
+      ]
+    },
+    "water_intake_liters": {
+      "type": "number"
+    },
+    "smoking": {
+      "type": "string",
+      "enum": [
+        "never",
+        "former",
+        "occasional",
+        "regular"
+      ]
+    },
+    "alcohol": {
+      "type": "string",
+      "enum": [
+        "never",
+        "occasional",
+        "moderate",
+        "heavy"
+      ]
+    },
+    "stress_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "very_high"
+      ]
+    },
+    "daily_activity": {
+      "type": "string",
+      "enum": [
+        "sedentary",
+        "lightly_active",
+        "moderately_active",
+        "very_active"
+      ]
+    },
+    "health_score": {
+      "type": "number",
+      "description": "Computed 0-100"
+    },
+    "heart_disease_risk": {
+      "type": "number"
+    },
+    "diabetes_risk": {
+      "type": "number"
+    },
+    "stroke_risk": {
+      "type": "number"
+    },
+    "hypertension_risk": {
+      "type": "number"
+    },
+    "disease_risks": {
+      "type": "object",
+      "description": "Normalized risk scores (0-95) for all tracked chronic diseases, keyed by disease slug",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "forecast": {
+      "type": "string",
+      "enum": [
+        "improving",
+        "stable",
+        "declining"
+      ]
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "age",
+    "gender",
+    "height_cm",
+    "weight_kg"
+  ]
+}

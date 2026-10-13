@@ -1,0 +1,54 @@
+{
+  "name": "MealPlan",
+  "type": "object",
+  "properties": {
+    "plan_type": {
+      "type": "string",
+      "enum": [
+        "weight_loss",
+        "weight_gain",
+        "diabetes",
+        "heart_healthy",
+        "vegetarian",
+        "vegan",
+        "high_protein",
+        "indian"
+      ]
+    },
+    "plan_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "breakfast": {
+      "type": "string"
+    },
+    "lunch": {
+      "type": "string"
+    },
+    "dinner": {
+      "type": "string"
+    },
+    "snacks": {
+      "type": "string"
+    },
+    "calories": {
+      "type": "number"
+    },
+    "protein": {
+      "type": "number"
+    },
+    "water_goal": {
+      "type": "number"
+    },
+    "shopping_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "plan_type",
+    "plan_date"
+  ]
+}

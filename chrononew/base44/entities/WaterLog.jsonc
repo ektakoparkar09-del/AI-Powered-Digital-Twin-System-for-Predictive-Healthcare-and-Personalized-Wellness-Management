@@ -1,0 +1,21 @@
+{
+  "name": "WaterLog",
+  "type": "object",
+  "properties": {
+    "log_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "glasses": {
+      "type": "number",
+      "description": "250ml glasses"
+    },
+    "liters": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "log_date",
+    "glasses"
+  ]
+}

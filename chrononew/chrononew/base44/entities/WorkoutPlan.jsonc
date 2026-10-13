@@ -1,0 +1,53 @@
+{
+  "name": "WorkoutPlan",
+  "type": "object",
+  "properties": {
+    "plan_type": {
+      "type": "string",
+      "enum": [
+        "home",
+        "gym",
+        "yoga",
+        "cardio",
+        "walking",
+        "strength",
+        "stretching"
+      ]
+    },
+    "plan_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sets": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "duration": {
+      "type": "number",
+      "description": "minutes"
+    },
+    "calories_burned": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "plan_type",
+    "plan_date"
+  ]
+}

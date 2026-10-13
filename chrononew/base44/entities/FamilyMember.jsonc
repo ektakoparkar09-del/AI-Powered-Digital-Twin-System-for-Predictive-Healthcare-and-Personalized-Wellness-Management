@@ -1,0 +1,46 @@
+{
+  "name": "FamilyMember",
+  "type": "object",
+  "properties": {
+    "relation": {
+      "type": "string",
+      "enum": [
+        "father",
+        "mother",
+        "brother",
+        "sister",
+        "grandfather",
+        "grandmother",
+        "child",
+        "other"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "diseases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lifestyle": {
+      "type": "string"
+    },
+    "deceased": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "relation"
+  ]
+}

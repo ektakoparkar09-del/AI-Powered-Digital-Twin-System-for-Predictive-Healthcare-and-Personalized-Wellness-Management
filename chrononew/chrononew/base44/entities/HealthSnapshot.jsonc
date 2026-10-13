@@ -1,0 +1,61 @@
+{
+  "name": "HealthSnapshot",
+  "type": "object",
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "description": "Reference to HealthProfile"
+    },
+    "health_score": {
+      "type": "number"
+    },
+    "bmi": {
+      "type": "number"
+    },
+    "blood_pressure_systolic": {
+      "type": "number"
+    },
+    "blood_pressure_diastolic": {
+      "type": "number"
+    },
+    "blood_sugar": {
+      "type": "number"
+    },
+    "cholesterol": {
+      "type": "number"
+    },
+    "heart_rate": {
+      "type": "number"
+    },
+    "heart_disease_risk": {
+      "type": "number"
+    },
+    "diabetes_risk": {
+      "type": "number"
+    },
+    "stroke_risk": {
+      "type": "number"
+    },
+    "hypertension_risk": {
+      "type": "number"
+    },
+    "disease_risks": {
+      "type": "object",
+      "description": "Normalized risk scores for all tracked chronic diseases at snapshot time",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "weight_kg": {
+      "type": "number"
+    },
+    "snapshot_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "health_score",
+    "snapshot_date"
+  ]
+}
